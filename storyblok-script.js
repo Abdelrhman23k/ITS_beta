@@ -1,11 +1,10 @@
 // storyblok-script.js
 
 // Import necessary functions from the Storyblok JS SDK, loaded from a CDN
-import { storyblokInit, apiPlugin } from 'https://unpkg.com/@storyblok/js';
+import { storyblokInit } from 'https://unpkg.com/@storyblok/js';
 
 const { storyblokApi } = storyblokInit({
   accessToken: 'szNh32riKEW6FPXGyrr0Igtt', // <-- IMPORTANT: Replace with your actual Preview Token
-  use: [apiPlugin],                         // Required to use the Storyblok API
   apiOptions: {
     region: 'eu' // Since your Storyblok space is in the EU region
     // If your space were in the US, it would be 'us'. Other regions: 'ca', 'ap', 'cn'.
