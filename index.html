@@ -1,246 +1,138 @@
-<html><head>
-<meta charset="utf-8"/>
-<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
-<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
-<title>ITS Global - Automotive Logistics</title>
-<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<style>
-    .hero-background-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image:url("data:image/svg+xml,%3Csvg width='1000' height='500' viewBox='0 0 1000 500' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cstyle%3E.land %7B fill: rgba(255,255,255,0.05); stroke: rgba(255,255,255,0.1); stroke-width: 0.5px; %7D .route %7B stroke: %230c7ff2; stroke-width: 2px; stroke-dasharray: 5,5; fill: none; %7D .dot %7B fill: %230c7ff2; %7D %3C/style%3E%3C/defs%3E%3C!-- Simplified World Map Path --%3E%3Cpath class='land' d='M0 250 L50 230 L100 260 L150 240 L200 220 L250 250 L300 270 L350 230 L400 200 L450 230 L500 260 L550 280 L600 250 L650 220 L700 240 L750 270 L800 290 L850 260 L900 230 L950 250 L1000 270 V500 H0 V250 Z M100 100 L150 80 L200 120 L250 100 L300 80 L350 120 L400 100 L450 80 L500 120 L550 100 L600 80 L650 120 L700 100 L750 80 L800 120 L850 100 L900 80 L950 120 L1000 100 V0 H0 V100 Z'/%3E%3C!-- Thailand to Egypt Route --%3E%3Cpath class='route' d='M700 240 Q 500 180, 400 200' /%3E%3Ccircle class='dot' cx='700' cy='240' r='5'/%3E%3Ccircle class='dot' cx='400' cy='200' r='5'/%3E%3C!-- Thailand to Libya Route --%3E%3Cpath class='route' d='M700 240 Q 480 150, 380 180' /%3E%3Ccircle class='dot' cx='380' cy='180' r='5'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg width='200' height='100' viewBox='0 0 200 100' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='10' y='10' width='180' height='80' fill='none' stroke='rgba(255,255,255,0.03)' stroke-width='2'/%3E%3Cline x1='10' y1='10' x2='190' y2='10' stroke='rgba(255,255,255,0.03)' stroke-width='2'/%3E%3Cline x1='10' y1='90' x2='190' y2='90' stroke='rgba(255,255,255,0.03)' stroke-width='2'/%3E%3Cline x1='10' y1='10' x2='10' y2='90' stroke='rgba(255,255,255,0.03)' stroke-width='2'/%3E%3Cline x1='190' y1='10' x2='190' y2='90' stroke='rgba(255,255,255,0.03)' stroke-width='2'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg width='150' height='75' viewBox='0 0 150 75' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 65 L10 40 L30 40 L30 20 L100 20 L120 40 L140 40 L140 65 Z M30 65 A5 5 0 0 0 40 65 A5 5 0 0 0 30 65 Z M110 65 A5 5 0 0 0 120 65 A5 5 0 0 0 110 65 Z' fill='none' stroke='rgba(255,255,255,0.02)' stroke-width='2'/%3E%3C/svg%3E");
-      background-size: cover, 150px 100px, 120px 60px;background-position: center, 20px 20px, bottom right 100px;
-      background-repeat: no-repeat, repeat, repeat;
-      opacity: 0.3;z-index: 0;
-    }
-  </style>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+    <link as="style" href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+    <title>ITS Global - Automotive Logistics</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+      .hero-background-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image:url("data:image/svg+xml,%3Csvg width='1000' height='500' viewBox='0 0 1000 500' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cstyle%3E.land %7B fill: rgba(255,255,255,0.05); stroke: rgba(255,255,255,0.1); stroke-width: 0.5px; %7D .route %7B stroke: %230c7ff2; stroke-width: 2px; stroke-dasharray: 5,5; fill: none; %7D .dot %7B fill: %230c7ff2; %7D %3C/style%3E%3C/defs%3E%3C!-- Simplified World Map Path --%3E%3Cpath class='land' d='M0 250 L50 230 L100 260 L150 240 L200 220 L250 250 L300 270 L350 230 L400 200 L450 230 L500 260 L550 280 L600 250 L650 220 L700 240 L750 270 L800 290 L850 260 L900 230 L950 250 L1000 270 V500 H0 V250 Z M100 100 L150 80 L200 120 L250 100 L300 80 L350 120 L400 100 L450 80 L500 120 L550 100 L600 80 L650 120 L700 100 L750 80 L800 120 L850 100 L900 80 L950 120 L1000 100 V0 H0 V100 Z'/%3E%3C!-- Thailand to Egypt Route --%3E%3Cpath class='route' d='M700 240 Q 500 180, 400 200' /%3E%3Ccircle class='dot' cx='700' cy='240' r='5'/%3E%3Ccircle class='dot' cx='400' cy='200' r='5'/%3E%3C!-- Thailand to Libya Route --%3E%3Cpath class='route' d='M700 240 Q 480 150, 380 180' /%3E%3Ccircle class='dot' cx='380' cy='180' r='5'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg width='200' height='100' viewBox='0 0 200 100' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='10' y='10' width='180' height='80' fill='none' stroke='rgba(255,255,255,0.03)' stroke-width='2'/%3E%3Cline x1='10' y1='10' x2='190' y2='10' stroke='rgba(255,255,255,0.03)' stroke-width='2'/%3E%3Cline x1='10' y1='90' x2='190' y2='90' stroke='rgba(255,255,255,0.03)' stroke-width='2'/%3E%3Cline x1='10' y1='10' x2='10' y2='90' stroke='rgba(255,255,255,0.03)' stroke-width='2'/%3E%3Cline x1='190' y1='10' x2='190' y2='90' stroke='rgba(255,255,255,0.03)' stroke-width='2'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg width='150' height='75' viewBox='0 0 150 75' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 65 L10 40 L30 40 L30 20 L100 20 L120 40 L140 40 L140 65 Z M30 65 A5 5 0 0 0 40 65 A5 5 0 0 0 30 65 Z M110 65 A5 5 0 0 0 120 65 A5 5 0 0 0 110 65 Z' fill='none' stroke='rgba(255,255,255,0.02)' stroke-width='2'/%3E%3C/svg%3E");
+        background-size: cover, 150px 100px, 120px 60px;background-position: center, 20px 20px, bottom right 100px;
+        background-repeat: no-repeat, repeat, repeat;
+        opacity: 0.3;z-index: 0;
+      }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
 <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
-<div class="layout-container flex h-full grow flex-col">
-<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
-<div class="container mx-auto flex items-center justify-between whitespace-nowrap px-6 py-4">
-<div class="flex items-center gap-3">
-<svg class="h-8 w-8 text-[#0c7ff2]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-<h2 class="text-2xl font-bold leading-tight tracking-tight text-[#111418]">ITS Global</h2>
+    <div class="layout-container flex h-full grow flex-col">
+        <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+            <div class="container mx-auto flex items-center justify-between whitespace-nowrap px-6 py-4">
+                <div class="flex items-center gap-3">
+                    <svg class="h-8 w-8 text-[#0c7ff2]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                    <h2 class="text-2xl font-bold leading-tight tracking-tight text-[#111418]">ITS Global</h2>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium leading-normal text-gray-600 hover:text-[#0c7ff2] transition-colors" href="#">Services</a>
+                    <a class="text-sm font-medium leading-normal text-gray-600 hover:text-[#0c7ff2] transition-colors" href="#">Industries</a>
+                    <a class="text-sm font-medium leading-normal text-gray-600 hover:text-[#0c7ff2] transition-colors" href="#">About Us</a>
+                    <a class="text-sm font-medium leading-normal text-gray-600 hover:text-[#0c7ff2] transition-colors" href="#">Contact</a>
+                </nav>
+                <button class="flex min-w-[100px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-5 bg-[#0c7ff2] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-blue-600 transition-colors shadow-sm hover:shadow-md">
+                    <span class="truncate">Get a Quote</span>
+                </button>
+            </div>
+        </header>
+        <main class="flex-1">
+            <section class="relative">
+                <div class="hero-background-overlay"></div>
+                <div id="hero-background" class="relative flex min-h-[calc(100vh-80px)] items-center justify-center bg-cover bg-center bg-no-repeat py-20 px-4 md:px-10" style='background-image: linear-gradient(rgba(0, 20, 50, 0.7) 0%, rgba(0, 10, 30, 0.9) 100%);'>
+                    <div class="container mx-auto text-center text-white z-10">
+                        <h1 id="hero-title" class="text-4xl font-black leading-tight tracking-tighter md:text-5xl lg:text-6xl">
+                            Loading...
+                        </h1>
+                        <p id="hero-subtitle" class="mt-6 mb-10 text-lg font-light leading-relaxed md:text-xl max-w-3xl mx-auto text-gray-200">
+                            Please wait while we fetch the latest information.
+                        </p>
+                        <button class="flex mx-auto min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 bg-[#0c7ff2] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-blue-600 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105">
+                            <span id="hero-button-text" class="truncate">Get a Quote Now</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="py-16 sm:py-24 bg-white">
+                <div class="container mx-auto px-6">
+                    <h2 id="services-section-title" class="text-3xl font-bold leading-tight tracking-tight text-center text-[#111418] mb-12">Our Core Services</h2>
+                    <div id="services-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    </div>
+                </div>
+            </section>
+            <section class="py-16 sm:py-24 bg-gray-50">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <h2 id="why-choose-us-title" class="text-3xl font-bold leading-tight tracking-tight text-[#111418]">Why Choose ITS Global?</h2>
+                        <p id="why-choose-us-subtitle" class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Reliable, Efficient, and Customer-Focused. ITS Global is committed to providing top-tier logistics solutions, ensuring your automotive shipments arrive safely and on time.</p>
+                    </div>
+                    <div id="features-list" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    </div>
+                </div>
+            </section>
+            <section class="py-16 sm:py-24 bg-white">
+                <div class="container mx-auto px-6">
+                    <h2 id="how-it-works-title" class="text-3xl font-bold leading-tight tracking-tight text-center text-[#111418] mb-12">How It Works</h2>
+                    <div id="process-steps-list" class="relative max-w-3xl mx-auto">
+                        <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-gray-200 transform -translate-x-1/2 hidden md:block"></div>
+                        <div class="space-y-12 md:space-y-0">
+                            </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-16 sm:py-24 bg-[#0c7ff2] text-white">
+                <div class="container mx-auto px-6 text-center">
+                    <h2 id="cta-title" class="text-3xl font-bold leading-tight tracking-tight mb-6">Ready to Ship? Get a Free Quote Today!</h2>
+                    <p id="cta-subtitle" class="text-lg mb-10 max-w-xl mx-auto text-blue-100">Let ITS Global handle your automotive logistics with precision and care. Contact us for a no-obligation quote.</p>
+                    <button class="min-w-[150px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-8 bg-white text-[#0c7ff2] text-base font-bold leading-normal tracking-[0.015em] hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105">
+                        <span id="cta-button-text" class="truncate">Request Your Quote</span>
+                    </button>
+                </div>
+            </section>
+            <section class="py-16 sm:py-24 bg-gray-50">
+                <div class="container mx-auto px-6">
+                    <h2 id="testimonials-title" class="text-3xl font-bold leading-tight tracking-tight text-center text-[#111418] mb-12">What Our Clients Say</h2>
+                    <div id="testimonials-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-gray-800 text-gray-300 py-12">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
+                    <div>
+                        <div class="flex items-center justify-center md:justify-start gap-3 mb-4">
+                            <svg class="h-7 w-7 text-[#0c7ff2]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+                            </svg>
+                            <h2 class="text-xl font-bold leading-tight tracking-tight text-white">ITS Global</h2>
+                        </div>
+                        <p class="text-sm text-gray-400">Your partner in automotive logistics.</p>
+                    </div>
+                    <nav class="flex flex-col md:flex-row justify-center gap-4 md:gap-8">
+                        <a class="text-sm hover:text-[#0c7ff2] transition-colors" href="#">Services</a>
+                        <a class="text-sm hover:text-[#0c7ff2] transition-colors" href="#">Industries</a>
+                        <a class="text-sm hover:text-[#0c7ff2] transition-colors" href="#">About Us</a>
+                        <a class="text-sm hover:text-[#0c7ff2] transition-colors" href="#">Contact</a>
+                        <a class="text-sm hover:text-[#0c7ff2] transition-colors" href="#">Privacy Policy</a>
+                    </nav>
+                    <div class="text-center md:text-right text-sm">
+                        <p>© 2025 ITS Global. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-medium leading-normal text-gray-600 hover:text-[#0c7ff2] transition-colors" href="#">Services</a>
-<a class="text-sm font-medium leading-normal text-gray-600 hover:text-[#0c7ff2] transition-colors" href="#">Industries</a>
-<a class="text-sm font-medium leading-normal text-gray-600 hover:text-[#0c7ff2] transition-colors" href="#">About Us</a>
-<a class="text-sm font-medium leading-normal text-gray-600 hover:text-[#0c7ff2] transition-colors" href="#">Contact</a>
-</nav>
-<button class="flex min-w-[100px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-5 bg-[#0c7ff2] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-blue-600 transition-colors shadow-sm hover:shadow-md">
-<span class="truncate">Get a Quote</span>
-</button>
-</div>
-</header>
-<main class="flex-1">
-<section class="relative">
-<div class="hero-background-overlay"></div>
-<div class="relative flex min-h-[calc(100vh-80px)] items-center justify-center bg-cover bg-center bg-no-repeat py-20 px-4 md:px-10" style='background-image: linear-gradient(rgba(0, 20, 50, 0.7) 0%, rgba(0, 10, 30, 0.9) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDiKFYdyR8EhMzATf3z-zg9cdATCKhE41Q_MhkVOQIfjeCSZHdA1dC3ebe-YAcE4gG2uEuRhIIiwhPDV1SeN8jDgvWSNw_5Ze_TxvhY95lx8gYxN2l2LPuNR6P4vDuaLu2R__FYP7st90aK5CJtDtWpwL7pP42oAb2trxX0KteI_0I0VX8QaO5fMsSI_I56YQRcPC7TOI6-6dBQt14C4YC7ctf9fU2jXx35MKc2kW6CmZQ0uJdw3N--fkr133-Lg61iAStAakrP3hH-");'>
-<div class="container mx-auto text-center text-white z-10">
-<h1 class="text-4xl font-black leading-tight tracking-tighter md:text-5xl lg:text-6xl">
-                  Your Trusted Partner for Automotive Logistics in Egypt and Libya
-                </h1>
-<p class="mt-6 mb-10 text-lg font-light leading-relaxed md:text-xl max-w-3xl mx-auto text-gray-200">
-                  ITS Global specializes in seamless shipping of Thailand-sourced vehicles to Egypt and Libya, ensuring reliability and efficiency.
-                </p>
-<button class="flex mx-auto min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 bg-[#0c7ff2] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-blue-600 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105">
-<span class="truncate">Get a Quote Now</span>
-</button>
-</div>
-</div>
-</section>
-<section class="py-16 sm:py-24 bg-white">
-<div class="container mx-auto px-6">
-<h2 class="text-3xl font-bold leading-tight tracking-tight text-center text-[#111418] mb-12">Our Core Services</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="flex flex-col items-center text-center gap-4 rounded-xl border border-gray-200 bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-<div class="text-[#0c7ff2] p-4 bg-blue-100 rounded-full">
-<svg fill="currentColor" height="32px" viewBox="0 0 256 256" width="32px" xmlns="http://www.w3.org/2000/svg">
-<path d="M247.42,117l-14-35A15.93,15.93,0,0,0,218.58,72H184V64a8,8,0,0,0-8-8H24A16,16,0,0,0,8,72V184a16,16,0,0,0,16,16H41a32,32,0,0,0,62,0h50a32,32,0,0,0,62,0h17a16,16,0,0,0,16-16V120A7.94,7.94,0,0,0,247.42,117ZM184,88h34.58l9.6,24H184ZM24,72H168v64H24ZM72,208a16,16,0,1,1,16-16A16,16,0,0,1,72,208Zm81-24H103a32,32,0,0,0-62,0H24V152H168v12.31A32.11,32.11,0,0,0,153,184Zm31,24a16,16,0,1,1,16-16A16,16,0,0,1,184,208Zm48-24H215a32.06,32.06,0,0,0-31-24V128h48Z"></path>
-</svg>
-</div>
-<h3 class="text-xl font-bold text-[#111418]">Vehicle Shipping</h3>
-<p class="text-gray-600 text-sm leading-relaxed">Secure and timely transport of vehicles from Thailand to Egypt and Libya.</p>
-</div>
-<div class="flex flex-col items-center text-center gap-4 rounded-xl border border-gray-200 bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-<div class="text-[#0c7ff2] p-4 bg-blue-100 rounded-full">
-<svg fill="currentColor" height="32px" viewBox="0 0 256 256" width="32px" xmlns="http://www.w3.org/2000/svg">
-<path d="M223.68,66.15,135.68,18a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32l80.34,44-29.77,16.3-80.35-44ZM128,120,47.66,76l33.9-18.56,80.34,44ZM40,90l80,43.78v85.79L40,175.82Zm176,85.78h0l-80,43.79V133.82l32-17.51V152a8,8,0,0,0,16,0V107.55L216,90v85.77Z"></path>
-</svg>
-</div>
-<h3 class="text-xl font-bold text-[#111418]">Parts &amp; Accessories</h3>
-<p class="text-gray-600 text-sm leading-relaxed">Efficient handling and delivery of automotive parts and accessories.</p>
-</div>
-<div class="flex flex-col items-center text-center gap-4 rounded-xl border border-gray-200 bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-<div class="text-[#0c7ff2] p-4 bg-blue-100 rounded-full">
-<svg fill="currentColor" height="32px" viewBox="0 0 256 256" width="32px" xmlns="http://www.w3.org/2000/svg">
-<path d="M240,184h-8V57.9l9.67-2.08a8,8,0,1,0-3.35-15.64l-224,48A8,8,0,0,0,16,104a8.16,8.16,0,0,0,1.69-.18L24,102.47V184H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM40,99,216,61.33V184H192V128a8,8,0,0,0-8-8H72a8,8,0,0,0-8,8v56H40Zm136,53H80V136h96ZM80,168h96v16H80Z"></path>
-</svg>
-</div>
-<h3 class="text-xl font-bold text-[#111418]">Warehousing</h3>
-<p class="text-gray-600 text-sm leading-relaxed">Strategic warehousing solutions for optimal inventory management.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="py-16 sm:py-24 bg-gray-50">
-<div class="container mx-auto px-6">
-<div class="text-center mb-12">
-<h2 class="text-3xl font-bold leading-tight tracking-tight text-[#111418]">Why Choose ITS Global?</h2>
-<p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Reliable, Efficient, and Customer-Focused. ITS Global is committed to providing top-tier logistics solutions, ensuring your automotive shipments arrive safely and on time.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="flex flex-col items-start gap-3 rounded-xl border border-gray-200 bg-white p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
-<div class="text-[#0c7ff2]">
-<svg fill="currentColor" height="28px" viewBox="0 0 256 256" width="28px" xmlns="http://www.w3.org/2000/svg">
-<path d="M208,40H48A16,16,0,0,0,32,56v58.78c0,89.61,75.82,119.34,91,124.39a15.53,15.53,0,0,0,10,0c15.2-5.05,91-34.78,91-124.39V56A16,16,0,0,0,208,40Zm0,74.79c0,78.42-66.35,104.62-80,109.18-13.53-4.51-80-30.69-80-109.18V56H208ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.68l50.34-50.34a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"></path>
-</svg>
-</div>
-<h3 class="text-lg font-bold text-[#111418]">Trusted Expertise</h3>
-<p class="text-gray-600 text-sm leading-relaxed">Years of experience in automotive logistics, specializing in Thailand, Egypt, and Libya.</p>
-</div>
-<div class="flex flex-col items-start gap-3 rounded-xl border border-gray-200 bg-white p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
-<div class="text-[#0c7ff2]">
-<svg fill="currentColor" height="28px" viewBox="0 0 256 256" width="28px" xmlns="http://www.w3.org/2000/svg">
-<path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"></path>
-</svg>
-</div>
-<h3 class="text-lg font-bold text-[#111418]">Fast Delivery</h3>
-<p class="text-gray-600 text-sm leading-relaxed">Optimized shipping routes and processes for the quickest possible delivery times.</p>
-</div>
-<div class="flex flex-col items-start gap-3 rounded-xl border border-gray-200 bg-white p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
-<div class="text-[#0c7ff2]">
-<svg fill="currentColor" height="28px" viewBox="0 0 256 256" width="28px" xmlns="http://www.w3.org/2000/svg">
-<path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"></path>
-</svg>
-</div>
-<h3 class="text-lg font-bold text-[#111418]">Dedicated Support</h3>
-<p class="text-gray-600 text-sm leading-relaxed">A dedicated team providing personalized support throughout the shipping process.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="py-16 sm:py-24 bg-white">
-<div class="container mx-auto px-6">
-<h2 class="text-3xl font-bold leading-tight tracking-tight text-center text-[#111418] mb-12">How It Works</h2>
-<div class="relative max-w-3xl mx-auto">
-<div class="absolute left-1/2 top-0 bottom-0 w-1 bg-gray-200 transform -translate-x-1/2 hidden md:block"></div>
-<div class="space-y-12 md:space-y-0">
-<div class="flex flex-col md:flex-row items-center">
-<div class="md:w-1/2 md:pr-8 text-center md:text-right">
-<div class="inline-flex items-center justify-center size-12 rounded-full bg-[#0c7ff2] text-white text-xl font-bold mb-2 ring-8 ring-white ring-offset-2 ring-offset-gray-100">1</div>
-<h3 class="text-xl font-semibold text-[#111418]">Request a Quote</h3>
-<p class="text-gray-600">Submit your shipment details for a customized quote.</p>
-</div>
-<div class="hidden md:block w-1/2"></div>
-</div>
-<div class="flex flex-col md:flex-row items-center">
-<div class="hidden md:block w-1/2"></div>
-<div class="md:w-1/2 md:pl-8 text-center md:text-left">
-<div class="inline-flex items-center justify-center size-12 rounded-full bg-[#0c7ff2] text-white text-xl font-bold mb-2 ring-8 ring-white ring-offset-2 ring-offset-gray-100">2</div>
-<h3 class="text-xl font-semibold text-[#111418]">Shipment Processing</h3>
-<p class="text-gray-600">Our team handles all logistics, from pickup to customs clearance.</p>
-</div>
-</div>
-<div class="flex flex-col md:flex-row items-center">
-<div class="md:w-1/2 md:pr-8 text-center md:text-right">
-<div class="inline-flex items-center justify-center size-12 rounded-full bg-[#0c7ff2] text-white text-xl font-bold mb-2 ring-8 ring-white ring-offset-2 ring-offset-gray-100">3</div>
-<h3 class="text-xl font-semibold text-[#111418]">Delivery &amp; Support</h3>
-<p class="text-gray-600">Receive your shipment with ongoing support and tracking.</p>
-</div>
-<div class="hidden md:block w-1/2"></div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-16 sm:py-24 bg-[#0c7ff2] text-white">
-<div class="container mx-auto px-6 text-center">
-<h2 class="text-3xl font-bold leading-tight tracking-tight mb-6">Ready to Ship? Get a Free Quote Today!</h2>
-<p class="text-lg mb-10 max-w-xl mx-auto text-blue-100">Let ITS Global handle your automotive logistics with precision and care. Contact us for a no-obligation quote.</p>
-<button class="min-w-[150px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-8 bg-white text-[#0c7ff2] text-base font-bold leading-normal tracking-[0.015em] hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105">
-<span class="truncate">Request Your Quote</span>
-</button>
-</div>
-</section>
-<section class="py-16 sm:py-24 bg-gray-50">
-<div class="container mx-auto px-6">
-<h2 class="text-3xl font-bold leading-tight tracking-tight text-center text-[#111418] mb-12">What Our Clients Say</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="flex flex-col gap-6 rounded-xl bg-white p-8 shadow-lg">
-<div class="flex items-center gap-4">
-<div class="size-16 rounded-full bg-center bg-no-repeat aspect-square bg-cover shadow-md" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC7CEQcqmmjnbNIm-PQ6jzJ9fVXJjRQHqwKLQDxzKHT4S3bB1VufmlIEP7H47ticAP3MbrpmZE4P1wpi5mCMUtXzfQ8k8qLVRvR7JLOvfZJhDlSLugGGQgs67ikU1qgno5k2aoVB7CCWddK9uw9hx3yiLMfSrI2TVPOmaVeZGVIBihXWBe4GsiDZmo8vvKXPfoNlMtJ6-4nx-KbMHfnwsdvVc5jBbo2zHGbpoesi0QlsOYdh1e0SoGVxKmt_Yy7dULzEKi7cR6DdFZC");'></div>
-<div>
-<h4 class="text-lg font-semibold text-[#111418]">Ahmed Hassan</h4>
-<p class="text-sm text-gray-500">Cairo, Egypt</p>
-</div>
-</div>
-<p class="text-gray-600 text-sm leading-relaxed italic">
-                    "ITS Global made shipping my vehicles to Egypt a breeze. Their team was professional and kept me informed every step of the way."
-                  </p>
-</div>
-<div class="flex flex-col gap-6 rounded-xl bg-white p-8 shadow-lg">
-<div class="flex items-center gap-4">
-<div class="size-16 rounded-full bg-center bg-no-repeat aspect-square bg-cover shadow-md" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIUmdHxYY2u5ShdT_HfylHT3ydXEGEBNYlQpX5YmiLyo5Rxc5L2l05qEPG-iRMQu7kxMqg9xg97pv0NULC9j9eLR6l8GO_mhOKxTu4DGPuXzIBZQgB3jHMeT3hIcDHKLGuywbptMJNkmnfkBI_sX5IQ2kPBfq9vCKbw5iOiLUnIO04EIHOSpfDTR6JoflGZJeK4sRZfwvDpwytHVlsQTqW93OPUINqwm3uTx-ncBcjEgJUyDA-J_djyo8CL2IMS6ffbE-pIxnQ5fWD");'></div>
-<div>
-<h4 class="text-lg font-semibold text-[#111418]">Fatima Ali</h4>
-<p class="text-sm text-gray-500">Tripoli, Libya</p>
-</div>
-</div>
-<p class="text-gray-600 text-sm leading-relaxed italic">
-                    "I was impressed with the speed and efficiency of ITS Global's service. My shipment arrived in Libya ahead of schedule and in perfect condition."
-                  </p>
-</div>
-<div class="flex flex-col gap-6 rounded-xl bg-white p-8 shadow-lg">
-<div class="flex items-center gap-4">
-<div class="size-16 rounded-full bg-center bg-no-repeat aspect-square bg-cover shadow-md" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAtVuredP8Yojc6y9NxDCjMoh38jj1d6b2PinKAYajSBtFjf2QMu4GLTfjxbggj4W9hGlgH62Gf53hj_K3gOgFFrJ7N1KraiyJkeF-qBo_OhhtbWCZNXJYI9ONvuRgqzX-J2oszsNf8OsVpk4H3phrpU6JviAZvUFGUDILasuXjXaKa07mfltqgorNHLKQbVKC-Y5U3ZxShAsBrqiYlBnMBObEYxI0YcgS-atmbTFpyo1bzamhfJkkt7xNQxQ9ZE33W1aBg1GUTd6i8");'></div>
-<div>
-<h4 class="text-lg font-semibold text-[#111418]">Omar Mahmoud</h4>
-<p class="text-sm text-gray-500">Benghazi, Libya</p>
-</div>
-</div>
-<p class="text-gray-600 text-sm leading-relaxed italic">
-                    "The customer support at ITS Global is exceptional. They were always available to answer my questions and address any concerns."
-                  </p>
-</div>
-</div>
-</div>
-</section>
-</main>
-<footer class="bg-gray-800 text-gray-300 py-12">
-<div class="container mx-auto px-6">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
-<div>
-<div class="flex items-center justify-center md:justify-start gap-3 mb-4">
-<svg class="h-7 w-7 text-[#0c7ff2]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-<h2 class="text-xl font-bold leading-tight tracking-tight text-white">ITS Global</h2>
-</div>
-<p class="text-sm text-gray-400">Your partner in automotive logistics.</p>
-</div>
-<nav class="flex flex-col md:flex-row justify-center gap-4 md:gap-8">
-<a class="text-sm hover:text-[#0c7ff2] transition-colors" href="#">Services</a>
-<a class="text-sm hover:text-[#0c7ff2] transition-colors" href="#">Industries</a>
-<a class="text-sm hover:text-[#0c7ff2] transition-colors" href="#">About Us</a>
-<a class="text-sm hover:text-[#0c7ff2] transition-colors" href="#">Contact</a>
-<a class="text-sm hover:text-[#0c7ff2] transition-colors" href="#">Privacy Policy</a>
-</nav>
-<div class="text-center md:text-right text-sm">
-<p>© 2024 ITS Global. All rights reserved.</p>
-</div>
-</div>
-</div>
-</footer>
-</div>
-</div>
-</body></html>
+
+<script src="app.js"></script>
+
+</body>
+</html>
