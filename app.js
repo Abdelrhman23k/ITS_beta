@@ -6,7 +6,8 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 
 // --- 2. INITIALIZE CLIENT ---
 // This line uses the 'supabase' object from the library you added in index.html
-const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+// We create our own client and name it 'supabaseClient' to avoid a name conflict.
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 
 // --- 3. HELPER FUNCTIONS ---
@@ -29,7 +30,7 @@ function setText(id, text) {
  */
 async function loadHomepageContent() {
     // .single() fetches the first row as an object, not an array
-    const { data, error } = await supabase.from('homepage').select('*').single();
+    const { data, error } = await supabaseClient.from('homepage').select('*').single();
 
     if (error) {
         console.error('Error fetching homepage content:', error);
@@ -58,7 +59,7 @@ async function loadHomepageContent() {
  * Fetches and renders the list of services as cards
  */
 async function loadServices() {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseClient
         .from('services')
         .select('*')
         .order('display_order', { ascending: true });
@@ -90,7 +91,7 @@ async function loadServices() {
  * Fetches and renders the list of features
  */
 async function loadFeatures() {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseClient
         .from('features')
         .select('*')
         .order('display_order', { ascending: true });
@@ -122,7 +123,7 @@ async function loadFeatures() {
  * Fetches and renders the list of testimonials
  */
 async function loadTestimonials() {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseClient
         .from('testimonials')
         .select('*')
         .order('display_order', { ascending: true });
