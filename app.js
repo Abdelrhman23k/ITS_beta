@@ -50,3 +50,4 @@ async function loadHomepageContent() {
         setText('how-it-works-title', data.how_it_works_title); // Added this line
         setText('cta-title', data.cta_title); // Added this line
         setText('cta-subtitle', data.cta_subtitle); // Added this line
+    }
