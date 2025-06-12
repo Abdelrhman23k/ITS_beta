@@ -77,4 +77,98 @@ async function loadServices() {
                     <div class="text-[#0c7ff2] p-4 bg-blue-100 rounded-full">
                         ${service.icon_svg || ''}
                     </div>
-                    <h3 class="text
+                    <h3 class="text-xl font-bold text-[#111418]">${service.title}</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">${service.description}</p>
+                </div>
+            `;
+            container.innerHTML += serviceHTML;
+        });
+    }
+}
+
+/**
+ * Fetches and renders the list of features
+ */
+async function loadFeatures() {
+    const { data, error } = await supabase
+        .from('features')
+        .select('*')
+        .order('display_order', { ascending: true });
+
+    if (error) {
+        console.error('Error fetching features:', error);
+        return;
+    }
+
+    const container = document.getElementById('features-list');
+    if (container && data) {
+        container.innerHTML = '';
+        data.forEach(feature => {
+            const featureHTML = `
+                <div class="flex flex-col items-start gap-3 rounded-xl border border-gray-200 bg-white p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-[#0c7ff2]">
+                        ${feature.icon_svg || ''}
+                    </div>
+                    <h3 class="text-lg font-bold text-[#111418]">${feature.title}</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">${feature.description}</p>
+                </div>
+            `;
+            container.innerHTML += featureHTML;
+        });
+    }
+}
+
+/**
+ * Fetches and renders the list of testimonials
+ */
+async function loadTestimonials() {
+    const { data, error } = await supabase
+        .from('testimonials')
+        .select('*')
+        .order('display_order', { ascending: true });
+
+    if (error) {
+        console.error('Error fetching testimonials:', error);
+        return;
+    }
+
+    const container = document.getElementById('testimonials-list');
+    if (container && data) {
+        container.innerHTML = '';
+        data.forEach(testimonial => {
+            // The author_photo_url from Supabase is a full URL, so we use it directly.
+            const imageUrl = testimonial.author_photo_url || '';
+
+            const testimonialHTML = `
+                <div class="flex flex-col gap-6 rounded-xl bg-white p-8 shadow-lg">
+                    <div class="flex items-center gap-4">
+                        <div class="size-16 rounded-full bg-center bg-no-repeat aspect-square bg-cover shadow-md" style="background-image: url('${imageUrl}');"></div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-[#111418]">${testimonial.author_name}</h4>
+                            <p class="text-sm text-gray-500">${testimonial.author_location}</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed italic">
+                        "${testimonial.quote}"
+                    </p>
+                </div>
+            `;
+            container.innerHTML += testimonialHTML;
+        });
+    }
+}
+
+
+// --- 5. RUN EVERYTHING ON PAGE LOAD ---
+document.addEventListener('DOMContentLoaded', () => {
+    // Check if the Supabase client is available
+    if (typeof supabase === 'undefined') {
+        console.error('Supabase client is not loaded. Make sure the library script is in your index.html');
+        return;
+    }
+    // Load all the different sections of the page
+    loadHomepageContent();
+    loadServices();
+    loadFeatures();
+    loadTestimonials();
+});
