@@ -1,6 +1,6 @@
 // --- 1. CONFIGURATION ---
 // Your actual Supabase URL and Key have been added here.
-const SUPABASE_URL = 'https://dknjxocwthbtkmbjpsw.supabase.co';
+const SUPABASE_URL = 'https://dknjxxowthbttkmbjosw.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRrbmp4eG93dGhidHRrbWJqb3N3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk2NDM3MDUsImV4cCI6MjA2NTIxOTcwNX0.vGGE7hGXwpvOkmLK9GsopHOQXWMtzbdIDsNOtOrF_aU';
 
 
