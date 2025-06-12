@@ -5,7 +5,7 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 
 
 // --- 2. INITIALIZE CLIENT ---
-// Create a Supabase client
+// This line uses the 'supabase' object from the library you added in index.html
 const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 
@@ -47,7 +47,34 @@ async function loadHomepageContent() {
         setText('why-choose-us-title', data.why_choose_us_title);
         setText('why-choose-us-subtitle', data.why_choose_us_subtitle);
         setText('testimonials-title', data.testimonials_title);
-        setText('how-it-works-title', data.how_it_works_title); // Added this line
-        setText('cta-title', data.cta_title); // Added this line
-        setText('cta-subtitle', data.cta_subtitle); // Added this line
+        setText('how-it-works-title', data.how_it_works_title);
+        setText('cta-title', data.cta_title);
+        setText('cta-subtitle', data.cta_subtitle);
+        setText('cta-button-text', data.cta_button_text);
     }
+}
+
+/**
+ * Fetches and renders the list of services as cards
+ */
+async function loadServices() {
+    const { data, error } = await supabase
+        .from('services')
+        .select('*')
+        .order('display_order', { ascending: true });
+
+    if (error) {
+        console.error('Error fetching services:', error);
+        return;
+    }
+    
+    const container = document.getElementById('services-list');
+    if (container && data) {
+        container.innerHTML = ''; // Clear existing content
+        data.forEach(service => {
+            const serviceHTML = `
+                <div class="flex flex-col items-center text-center gap-4 rounded-xl border border-gray-200 bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-[#0c7ff2] p-4 bg-blue-100 rounded-full">
+                        ${service.icon_svg || ''}
+                    </div>
+                    <h3 class="text
